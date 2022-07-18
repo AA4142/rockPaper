@@ -17,21 +17,34 @@ function getComputerChoice(){
     return choices[randomNumber];
 }
 
+function convertToWord(letter){
+    if (letter === "r") return "rock";
+    if (letter === "p") return "paper";
+    return "scissors"
+}
+
 
 function win(userChoice, computerChoice){
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = userChoice + " beats " + computerChoice + " You Win ";
+    result_p.innerHTML = `${convertToWord(userChoice)}   beats  ${convertToWord(computerChoice)} You Win `;
 }
 
-function lose(){
+function lose(userChoice, computerChoice){
+    computerScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = `${convertToWord(userChoice)}   loses  ${convertToWord(computerChoice)} You lose `;
+}
     
+
+function draw(userChoice, computerChoice){
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = `${convertToWord(userChoice)}   ties  ${convertToWord(computerChoice)} draw `;
 }
 
-function draw(){
-    console.log("draw");
-}
 
 
 
