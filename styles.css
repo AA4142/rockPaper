@@ -15,6 +15,9 @@ header {
     padding: 20px;
 }
 
+
+
+
 header >h1 {
     color: #25272E;
     text-align: center;
@@ -98,4 +101,20 @@ img{
     font-weight: bold;
     font-size: 20px;
     margin-top: 20px;
+}
+
+.green-glow{
+    border: 4px solid #31b43a;
+    box-shadow: 0 0 10px green;
+}
+
+
+.red-glow{
+    border: 4px solid #d01115;
+    box-shadow: 0 0 10px  red;
+}
+
+.gray-glow{
+    border: 4px solid #464647;
+    box-shadow: 0 0 10px  #25292b;
 }

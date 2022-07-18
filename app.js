@@ -29,13 +29,19 @@ function win(userChoice, computerChoice){
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${convertToWord(userChoice)}   beats  ${convertToWord(computerChoice)} You Win `;
+    document.getElementById(userChoice).classList.add('green-glow');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow')}, 700);
 }
+
+
 
 function lose(userChoice, computerChoice){
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${convertToWord(userChoice)}   loses  ${convertToWord(computerChoice)} You lose `;
+    document.getElementById(userChoice).classList.add('red-glow');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('red-glow')}, 700);
 }
     
 
@@ -43,6 +49,8 @@ function draw(userChoice, computerChoice){
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${convertToWord(userChoice)}   ties  ${convertToWord(computerChoice)} draw `;
+    document.getElementById(userChoice).classList.add('gray-glow');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('gray-glow')}, 700);
 }
 
 
